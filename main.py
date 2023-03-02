@@ -13,6 +13,11 @@ app = Flask(__name__)
 app.config["DEBUG"] = True
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+@app.route('/')
+def index():
+    return jsonify({"ini mau couy"})
+
+
 @app.route('/api/predict-bilah', methods=['POST'])
 def cek_bilah():
 
